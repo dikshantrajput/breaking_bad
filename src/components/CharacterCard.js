@@ -10,7 +10,7 @@ function CharacterCard({item}) {
         <div className="card__container">
             <Link to={`/${char_id}/${name}`}>
                 <div className="card__header">
-                    <img src={img} height="400" width="300" loading="lazy" alt={`character image ${char_id}`}/>
+                    <img src={img} height="400" width="300" loading="lazy" alt={`character ${char_id}`}/>
                 </div>
             </Link>
             <div className="card__body">

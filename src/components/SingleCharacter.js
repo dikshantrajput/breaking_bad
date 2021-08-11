@@ -50,7 +50,7 @@ function SingleCharacter() {
             setIsLoading(true)
             source.cancel('Cancelling while unmounting')
         }
-    }, [])
+    }, [id,name])
 
     if(isLoading){
         return <div className="wrapper">
@@ -65,7 +65,7 @@ function SingleCharacter() {
             <div className="single__character__container">
                 <div className="single__character__description__container d-flex">
                     <div className="single__charcater__image__contianer">
-                        <img width="300" height="400" src={character?.img} alt="character image" />
+                        <img width="300" height="400" src={character?.img} alt={`character${character?.char_id}`} />
                     </div>
                     <div className="single__charcater__body">
                         <p>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './filter.css'
 
 function Filter({search, inputRef, input, categories, selectRef, searchCategory}) {

@@ -32,11 +32,7 @@ function Characters() {
             return setSearchCharacters(characters)
         }
 
-        const searchCharacters = characters.filter((item)=>{
-            if(item.name.toUpperCase().includes(string.toUpperCase())){
-                return item
-            }
-        })
+        const searchCharacters = characters.filter((item)=>item.name.toUpperCase().includes(string.toUpperCase()))
         setTotalPages(Math.ceil(searchCharacters.length/charactersPerPage))
 
         return setSearchCharacters(searchCharacters)
@@ -49,11 +45,7 @@ function Characters() {
             return setSearchCharacters(characters)
         }
 
-        const searchCharacters = characters.filter((item)=>{
-            if(item.category.toUpperCase().includes(cat.toUpperCase())){
-                return item
-            }
-        })
+        const searchCharacters = characters.filter((item)=>item.category.toUpperCase().includes(cat.toUpperCase()))
         setTotalPages(Math.ceil(searchCharacters.length/charactersPerPage))
 
         return setSearchCharacters(searchCharacters)
@@ -92,10 +84,9 @@ function Characters() {
                 })
 
                 if(response.status && response.status === 200){
-                    
                     response.data.map((item)=>{
-                        item.category.split(',').forEach((cat)=>{
-                            categoriesSet.add(cat.trim())
+                        return item.category.split(',').forEach((cat)=>{
+                            return categoriesSet.add(cat.trim())
                         })
                     })
 
@@ -121,7 +112,7 @@ function Characters() {
             setIsLoading(true)
             source.cancel('Cancelling while unmounting')
         }
-    }, [])
+    }, [charactersPerPage])
     
     if(isLoading){
         return <div className="wrapper">
