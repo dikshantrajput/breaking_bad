@@ -1,0 +1,18 @@
+.wrapper{
+    color:var(--textWhiteColor);
+    background:var(--mainColor);
+    padding:4rem;
+    min-height:calc(100vh - 97px);
+}
+
+.characters__container{
+    margin:0 auto;
+    max-width:1400px;
+}
+
+.characters__cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}

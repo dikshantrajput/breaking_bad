@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body{
+  font-family: 'Poppins','sans-serif';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root{
+  --mainColor:#121212;
+  --textWhiteColor:rgba(255,255,255,0.8);
+  --textWhiteSecondaryColor:rgba(255,255,255,0.6);
+  --textPurpleLightColor:#9965F4;
+  --textPurpleColor:#6002EE;
+  --textPurpleSecondaryColor:#7E3FF2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-blue{
+  background:#3D00E0 !important;
 }
 
-.App-link {
-  color: #61dafb;
+.border-none{
+  border: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
+.outline-none{
+  outline: none !important;
+}
+
+.w-full{
+  width:100%;
+}
+
+.nav-link:hover{
+  background: rgba(0,0,0,0.2);
+}
+
+.loading__container{
+  display: grid;
+  place-items: center;
+}
+
+.loader{
+  height:40px;
+  width:40px;
+  border-radius: 50%;
+  border:3px solid var(--textWhiteSecondaryColor);
+  border-top: 3px solid var(--textPurpleSecondaryColor);
+  -webkit-animation:loader infinite 0.4s linear ;
+  -moz-animation:loader infinite 0.4s linear ;
+  -o-animation:loader infinite 0.4s linear ;
+  animation:loader infinite 0.4s linear ;
+}
+
+@-o-keyframes loader{
+  from{
     transform: rotate(0deg);
   }
-  to {
+  to{
     transform: rotate(360deg);
   }
+}
+
+@-moz-keyframes loader{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width:768px){
+  .navbar-brand{
+    margin-left: 0 !important;
+  }  
 }
